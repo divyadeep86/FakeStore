@@ -20,7 +20,6 @@ class MainActivity : ComponentActivity() {
             FakeStoreDemoTheme {
 
                 val rememberNavHost = rememberNavController()
-                // A surface container using the 'background' color from the theme
                 AppNavHost(navController = rememberNavHost)
             }
         }
