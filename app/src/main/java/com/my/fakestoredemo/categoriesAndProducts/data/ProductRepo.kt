@@ -1,8 +1,7 @@
 package com.my.fakestoredemo.categoriesAndProducts.data
 
 import android.util.Log
-import com.my.fakestoredemo.categoriesAndProducts.data.ProductApi
-import com.my.fakestoredemo.categoriesAndProducts.data.ProductRemote
+
 import com.my.fakestoredemo.common.network.ErrorConstant
 import com.my.fakestoredemo.common.network.ResponseHandler
 import com.my.fakestoredemo.common.network.getError
