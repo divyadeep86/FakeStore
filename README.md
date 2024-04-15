@@ -3,7 +3,7 @@
 This project is a mobile application developed using Kotlin and Java, built with Gradle. It uses the Model-View-ViewModel (MVVM) architectural pattern and follows the principles of Clean Architecture. The project is divided into several layers, each with its own set of responsibilities.
 
 ## Layers
-![Layer Diagram](https://github.com/divyadeep86/FakeStore/blob/main/images/appArch.drawio.png)
+![Layer Diagram](https://github.com/divyadeep86/FakeStore/blob/main/images/appArcGif.drawio.svg)
 
 ### UI Layer
 
