@@ -33,4 +33,7 @@ This layer is responsible for data persistence and network calls. It abstracts t
 - `CategoriesRepository.kt`: This repository is responsible for fetching categories data. It can fetch data from a local database or a remote API.
 - `ProductListRepository.kt`: This repository is responsible for fetching product data. It can fetch data from a local database or a remote API.
 
+## Layers
+![Layer Diagram](Images/example.png)
+
 Each layer has a clear set of responsibilities, which makes the code easier to maintain and test. The separation of concerns also allows each layer to be developed and tested independently.
