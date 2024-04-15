@@ -5,6 +5,9 @@ This project is a mobile application developed using Kotlin and Java, built with
 ## Layers
 ![Layer Diagram](https://github.com/divyadeep86/FakeStore/blob/main/images/appArcGif.drawio.svg)
 
+## Classes and Layer interaction
+![Layer Diagram](https://github.com/divyadeep86/FakeStore/blob/main/images/ClassesAndLayerInteractions.drawio.png)
+
 ### UI Layer
 
 This layer is responsible for displaying the user interface and capturing user interactions. It includes screens, custom views, and navigation components. The main classes in this layer are:
