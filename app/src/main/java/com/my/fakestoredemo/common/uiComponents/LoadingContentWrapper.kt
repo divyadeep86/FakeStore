@@ -10,7 +10,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import com.my.fakestoredemo.common.utils.TestTags
 
 /**
  * - Purpose: `LoadingContentWrapper` is a Jetpack Compose utility for managing UI states.
@@ -42,7 +44,7 @@ fun LoadingContentWrapper(
         if (isLoading) {
             CircularProgressIndicator(
                 modifier = Modifier
-                    .align(Alignment.Center)
+                    .align(Alignment.Center).testTag(TestTags.ProgressIndicator)
                     .size(50.dp), strokeWidth = 4.dp
             )
         }
@@ -50,7 +52,7 @@ fun LoadingContentWrapper(
 
 
         if (showDialog && errorMessage != null) {
-            AlertDialog(modifier = Modifier,
+            AlertDialog(modifier = Modifier.testTag(TestTags.AlertDialog),
                 onDismissRequest = dismissDialog,
                 title = { Text(dialogTitle) },
                 text = { Text(errorMessage) },

@@ -12,7 +12,6 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mockito
-import org.mockito.Mockito.mock
 
 
 class CategoriesRepoTest {
@@ -73,7 +72,7 @@ class CategoriesRepoTest {
     fun test_getCategories_Exception_expected_Failure_with_ExceptionMessage ()  = runTest {
 //for
         // Mock CategoriesRepo
-        val categoriesRepo = mock(CategoriesRepo::class.java)
+        val categoriesRepo = Mockito.mock(CategoriesRepo::class.java)
         Mockito.`when`( categoriesRepo.getCategories()).thenThrow(Exception("Unknown error"))
         val response = categoriesRepo.getCategories()
         Assert.assertEquals(true,

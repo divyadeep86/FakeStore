@@ -22,28 +22,31 @@ fun AppScrollableTabRow(
     selectedTabIndex: Int,
     onTabSelected: (Int) -> Unit
 ) {
-    ScrollableTabRow(
-        selectedTabIndex = selectedTabIndex,
-        edgePadding = 0.dp,
-        indicator = { tabPositions ->
-            Box(
-                Modifier
-                    .tabIndicatorOffset(tabPositions[selectedTabIndex])
-                    .height(4.dp)
-                    .background(color = Color.Blue)
-            )
+    if(titles.isNotEmpty()){
+        ScrollableTabRow(
+            selectedTabIndex = selectedTabIndex,
+            edgePadding = 0.dp,
+            indicator = { tabPositions ->
+                Box(
+                    Modifier
+                        .tabIndicatorOffset(tabPositions[selectedTabIndex])
+                        .height(4.dp)
+                        .background(color = Color.Blue)
+                )
 
-        },
-        divider = {}
-    ) {
-        titles.forEachIndexed { index, title ->
-            Tab(
-                selected = selectedTabIndex == index,
-                onClick = { onTabSelected(index) },
-                text = { Text(title) }
-            )
+            },
+            divider = {}
+        ) {
+            titles.forEachIndexed { index, title ->
+                Tab(
+                    selected = selectedTabIndex == index,
+                    onClick = { onTabSelected(index) },
+                    text = { Text(title) }
+                )
+            }
         }
     }
+
 
 
 }

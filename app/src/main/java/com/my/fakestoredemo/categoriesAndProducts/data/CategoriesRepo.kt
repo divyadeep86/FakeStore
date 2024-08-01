@@ -5,12 +5,14 @@ import com.my.fakestoredemo.common.network.ErrorConstant
 import com.my.fakestoredemo.common.network.ResponseHandler
 import com.my.fakestoredemo.common.network.getError
 import retrofit2.HttpException
+import retrofit2.Response
 import java.io.IOException
 
 class CategoriesRepo(private val categoriesApi: CategoriesApi) {
     suspend fun getCategories():ResponseHandler<List<String>>{
         return try {
             val response = categoriesApi.getProductsCategories()
+
             ResponseHandler.Success(response)
         } catch (e: HttpException) {
             Log.e("getCategories:HttpException-->", e.message())

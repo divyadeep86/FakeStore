@@ -18,7 +18,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FakeStoreDemoTheme {
-
                 val rememberNavHost = rememberNavController()
                 AppNavHost(navController = rememberNavHost)
             }

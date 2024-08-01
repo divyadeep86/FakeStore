@@ -11,6 +11,7 @@ class ProductListUseCase(private val productRepo: ProductRepo) {
     fun getProductsByCategory(categoryName: String): Flow<DataState<List<Product>>> = flow {
         emit(DataState.loading(true))
         when (val result = productRepo.getProductByCategory(categoryName)) {
+
             is ResponseHandler.Success -> {
                 emit(DataState.success(data = result.data.map { it.toProduct() }))
             }

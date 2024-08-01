@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="NavigationTest">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -17,6 +20,12 @@
           </targetSelectedWithDropDown>
           <timeTargetWasSelectedWithDropDown value="2024-04-15T03:46:31.720829800Z" />
         </State>
+      </entry>
+      <entry key="navigationFromCategoriesScreenToProductDetailsScreen()">
+        <State />
+      </entry>
+      <entry key="test_NavigationOnClickProductItem_TrueExpected()">
+        <State />
       </entry>
     </value>
   </component>

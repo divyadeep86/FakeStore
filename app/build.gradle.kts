@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.Packaging
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -38,6 +40,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+      //  freeCompilerArgs = listOf("-Xjvm-default=compatibility")
     }
     buildFeatures {
         compose = true
@@ -52,13 +55,16 @@ android {
     }
     hilt {
         enableExperimentalClasspathAggregation  = true
+        enableAggregatingTask =true
     }
     testOptions {
         unitTests.isReturnDefaultValues = true
         unitTests.isIncludeAndroidResources  = true
+
         /*
-        unitTests.isReturnDefaultValues = true*/
+               unitTests.isReturnDefaultValues = true*/
     }
+
 }
 
 dependencies {
@@ -94,6 +100,8 @@ dependencies {
     implementation (libs.androidx.navigation.compose)
     implementation (libs.androidx.lifecycle.runtime.compose)
 
+    implementation(libs.androidx.compose.material3.adaptive.navigation.suite)
+    implementation(libs.androidx.compose.material3.adaptive.navigation)
     //Coil for image loading
     implementation (libs.coil.compose)
 
@@ -134,5 +142,9 @@ dependencies {
     testImplementation (libs.runner)
     androidTestImplementation (libs.runner)
     testImplementation(libs.turbine)
+    // Add this line for Mockito
+    testImplementation ("org.mockito:mockito-core:3.12.4")
+    androidTestImplementation ("org.mockito:mockito-android:3.12.4")
+    androidTestImplementation ("io.mockk:mockk-android:1.12.3")
 
 }
